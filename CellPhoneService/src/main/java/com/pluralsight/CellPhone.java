@@ -21,21 +21,20 @@ Provide getter and setter methods for all 5 data members.
 * */
 public class CellPhone {
 
+    // Basic phone information
     public int serialNumber;
     String model;
     String carrier;
     String phoneNumber;
     String owner;
 
-
-    public CellPhone(int serialNumber, String model, String carrier, String phoneNumber, String ownerName){
-
+    // Constructor that takes all values when creating a phone object
+    public CellPhone(int serialNumber, String model, String carrier, String phoneNumber, String ownerName) {
         this.serialNumber = serialNumber;
         this.model = model;
         this.carrier = carrier;
         this.phoneNumber = phoneNumber;
         this.owner = ownerName;
-
     }
 
     public CellPhone() {
@@ -46,13 +45,14 @@ public class CellPhone {
         this.owner = "";
     }
 
-    public void displayUserInfo(){
-
-        System.out.println("Owner Name: " + owner + ", " + "Serial Number" + serialNumber + " "
-                + model + " " + " " + carrier + " " + " " + phoneNumber );
-
+    // Method to print out all the phone info for our person
+    public void displayUserInfo() {
+        System.out.println("Owner Name: " + owner + "\n"
+                + "Serial Number: " + serialNumber + "\n"
+                + "Model: " + model + "\n"
+                + "Carrier: " + carrier + "\n"
+                + "Phone Number: " + phoneNumber);
     }
-
 
     public int getSerialNumber() {
         return serialNumber;
@@ -93,6 +93,5 @@ public class CellPhone {
     public void setOwner(String owner) {
         this.owner = owner;
     }
-
-
 }
+
