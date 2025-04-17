@@ -1,42 +1,14 @@
 package com.pluralsight;
-/*
-* Add a class named CellPhoneApplication and add the main() method.
-Create a class named CellPhone. The class should have the following data
-members:
-- serialNumber (ex: 1000000 - 9999999)
-- model (ex: iPhone X)
-- carrier (ex: AT&T)
-- phoneNumber (ex: 800-555-5555)
-- owner (ex: Dana Wyatt)
-Add a parameterless constructor. Provide the following default values for all
-string data types in the constructor.
-- serialNumber = 0
-- model = ""
-- carrier = ""
-- phoneNumber = ""
-- owner = ""
-Provide getter and setter methods for all 5 data members.
-*
-*
-* */
+
 public class CellPhone {
 
-    // Basic phone information
     public int serialNumber;
     String model;
     String carrier;
     String phoneNumber;
     String owner;
 
-    // Constructor that takes all values when creating a phone object
-    public CellPhone(int serialNumber, String model, String carrier, String phoneNumber, String ownerName) {
-        this.serialNumber = serialNumber;
-        this.model = model;
-        this.carrier = carrier;
-        this.phoneNumber = phoneNumber;
-        this.owner = ownerName;
-    }
-
+    // constructor - creates a new empty phone
     public CellPhone() {
         this.serialNumber = 0;
         this.model = "";
@@ -45,14 +17,13 @@ public class CellPhone {
         this.owner = "";
     }
 
-    // Method to print out all the phone info for our person
-    public void displayUserInfo() {
-        System.out.println("Owner Name: " + owner + "\n"
-                + "Serial Number: " + serialNumber + "\n"
-                + "Model: " + model + "\n"
-                + "Carrier: " + carrier + "\n"
-                + "Phone Number: " + phoneNumber);
+    // makes this phone call another number
+    public void dial(String phoneNumberToCall) {
+        System.out.println(this.owner + "'s phone is calling " + phoneNumberToCall);
     }
+
+    // getters and setters
+    // (these let us see and change phone details safely)
 
     public int getSerialNumber() {
         return serialNumber;
