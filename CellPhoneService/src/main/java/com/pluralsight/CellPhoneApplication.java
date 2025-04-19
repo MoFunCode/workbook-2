@@ -1,6 +1,5 @@
 package com.pluralsight;
 
-
 public class CellPhoneApplication {
 
     public static void display(CellPhone phone) {
